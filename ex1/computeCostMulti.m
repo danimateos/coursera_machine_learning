@@ -13,8 +13,9 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-
-
+% Taken from previous; should work with multiple features.
+H = X * theta;
+J = (1/(2 * m)) * sum((H - y) .^ 2);
 
 
 % =========================================================================
