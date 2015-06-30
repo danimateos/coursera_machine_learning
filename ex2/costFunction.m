@@ -20,7 +20,12 @@ grad = zeros(size(theta));
 % Note: grad should have the same dimensions as theta
 %
 
+z = X * theta;
+H = 1 ./ (1 + e .^ (-z));
 
+J = (-1 / m) * (log(H)' * y + log(1 - H)' * (1 - y));
+
+grad = (1 / m) * X' * (H - y);
 
 
 
